@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Fallate</title>
+  <title>Java语法基础笔记05 | Fallate</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Fallate">
-<meta property="og:url" content="http://example.com/page/2/index.html">
+  <meta name="description" content="一、import java.util.*1、含义 （1）import 是java中的一个关键字，用于导入其他包（package）中的类、接口等，这样在当前代码文件中就可以直接使用这些被导入的类和接口，而无需使用其全限定名。 （2）java.util 是Java标准库中的一个包，这个包提供了一系列实用工具类和集合框架类，例如用于处理日期和时间的Date、Calendar 类 ，用于存储数据的集合 A">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java语法基础笔记05">
+<meta property="og:url" content="http://example.com/2025/03/03/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B005/index.html">
 <meta property="og:site_name" content="Fallate">
+<meta property="og:description" content="一、import java.util.*1、含义 （1）import 是java中的一个关键字，用于导入其他包（package）中的类、接口等，这样在当前代码文件中就可以直接使用这些被导入的类和接口，而无需使用其全限定名。 （2）java.util 是Java标准库中的一个包，这个包提供了一系列实用工具类和集合框架类，例如用于处理日期和时间的Date、Calendar 类 ，用于存储数据的集合 A">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-03-03T13:51:32.000Z">
+<meta property="article:modified_time" content="2025-03-03T15:56:29.651Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Java语法基础">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Fallate" type="application/atom+xml">
@@ -150,280 +155,164 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-进一步调试" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Java语法基础笔记05" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2025/03/01/%E8%BF%9B%E4%B8%80%E6%AD%A5%E8%B0%83%E8%AF%95/">进一步调试</a>
+    <h1 class="article-title" itemprop="name">
+      Java语法基础笔记05
     </h1>
   
 
         
-        <a href="/2025/03/01/%E8%BF%9B%E4%B8%80%E6%AD%A5%E8%B0%83%E8%AF%95/" class="archive-article-date">
-  	<time datetime="2025-03-01T07:07:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-01</time>
+        <a href="/2025/03/03/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B005/" class="archive-article-date">
+  	<time datetime="2025-03-03T13:51:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>这是进一步的博客编写调试，拜托一定要成功</p>
-<style>.qrruslgaylxv{zoom:25%;}</style><img src="/2025/03/01/%E8%BF%9B%E4%B8%80%E6%AD%A5%E8%B0%83%E8%AF%95/000.png" class="qrruslgaylxv" alt="崔然竣">
+        <h2 id="一、import-java-util"><a href="#一、import-java-util" class="headerlink" title="一、import java.util.*"></a>一、import java.util.*</h2><h3 id="1、含义"><a href="#1、含义" class="headerlink" title="1、含义"></a>1、含义</h3><p> （1）<strong>import</strong> 是java中的一个关键字，用于导入其他包（package）中的类、接口等，这样在当前代码文件中就可以直接使用这些被导入的类和接口，而无需使用其全限定名。</p>
+<p>（2）<strong>java.util</strong> 是Java标准库中的一个包，这个包提供了一系列实用工具类和集合框架类，例如用于处理日期和时间的Date、Calendar 类 ，用于存储数据的集合 ArrayList 、LinkedList 、 HashMap 等，以及用于随即生成随机数的 Random类等。</p>
+<p>（3）***** 是一个通配符，表示导入 java.util 包下的所有类和接口。</p>
+<p>（4）<strong>语句整体含义</strong>：导入 <code>java.util</code> 包中的所有类和接口，这样在当前代码文件中就可以直接使用这些类和接口，而不需要每次都写出它们的全限定名。</p>
+<h2 id="二、常用类以及代码示例"><a href="#二、常用类以及代码示例" class="headerlink" title="二、常用类以及代码示例"></a>二、常用类以及代码示例</h2><p>1、代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">util</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">		ArrayList&lt;String&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();<span class="comment">//使用ArrayList类</span></span><br><span class="line">		list.add(<span class="string">&quot;apple&quot;</span>);</span><br><span class="line">		list.add(<span class="string">&quot;banana&quot;</span>);</span><br><span class="line">		list.add(<span class="string">&quot;cherry&quot;</span>);</span><br><span class="line"></span><br><span class="line">		Iterator&lt;String&gt; iterator = list.iterator();</span><br><span class="line">		<span class="keyword">while</span> (iterator.hasNext()) &#123;</span><br><span class="line">			System.out.println(iterator.next());</span><br><span class="line">			<span class="comment">//如果有下一个元素，则将下一个元素输出；</span></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="type">Random</span> <span class="variable">random</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Random</span>();</span><br><span class="line">		<span class="type">int</span> <span class="variable">randomNumber</span> <span class="operator">=</span> random.nextInt(<span class="number">10</span>);</span><br><span class="line">		<span class="comment">//生成的随机整数的范围是0到9（包含0，不包含10）</span></span><br><span class="line">		System.out.println(<span class="string">&quot;Random number :&quot;</span> + randomNumber);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">生活记录</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2025/03/01/%E8%BF%9B%E4%B8%80%E6%AD%A5%E8%B0%83%E8%AF%95/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-继续调试" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2025/03/01/%E7%BB%A7%E7%BB%AD%E8%B0%83%E8%AF%95/">继续调试</a>
-    </h1>
-  
-
-        
-        <a href="/2025/03/01/%E7%BB%A7%E7%BB%AD%E8%B0%83%E8%AF%95/" class="archive-article-date">
-  	<time datetime="2025-03-01T06:55:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>呜呜呜好难呀!</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">生活记录</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2025/03/01/%E7%BB%A7%E7%BB%AD%E8%B0%83%E8%AF%95/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-调试博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2025/03/01/%E8%B0%83%E8%AF%95%E5%8D%9A%E5%AE%A2/">调试博客</a>
-    </h1>
-  
-
-        
-        <a href="/2025/03/01/%E8%B0%83%E8%AF%95%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2025-03-01T06:18:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>好麻烦哇，博客编写都好麻烦</p>
-<img src="/2025/03/01/%E8%B0%83%E8%AF%95%E5%8D%9A%E5%AE%A2/Landi01.jpg" class="" title="李兰迪">上图是我喜欢的女孩
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">生活记录</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2025/03/01/%E8%B0%83%E8%AF%95%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-我的第一篇博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2025/03/01/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章</a>
-    </h1>
-  
-
-        
-        <a href="/2025/03/01/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2025-02-28T16:24:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>##第一章</p>
-<p>内容</p>
+<p>2、敲代码时遇到的问题</p>
+<p>★(1) 在声明公共类时，我并没有让公共类名和java文件名相等，导致代码运行错误。</p>
+<p>​	eg：在名为 <strong>InportExample.java</strong> 的文件内声明 公共<strong>类 InportExample</strong></p>
+<h2 id="三、命令提示符"><a href="#三、命令提示符" class="headerlink" title="三、命令提示符"></a>三、命令提示符</h2><p>1、使用原因：</p>
+<p>（1）理解编译和运行机制：能够让开发者更加深入地了解Java程序从源代码到可执行程序的过程。（使用javac命令手动编译 <code>.java</code> 文件，可以清晰地看到编译器如何将 Java 代码转换为字节码文件（<code>.class</code> 文件）。然后使用 <code>java</code> 命令运行字节码，了解 Java 虚拟机（JVM）是如何加载和执行这些字节码的。这对于理解 Java 语言的底层工作原理非常有帮助，是学习 Java 基础的重要环节。）</p>
+<p>（2）注意事项：</p>
+<p>①D : \ Javacodes  javac HelloWorld.java</p>
+<p>②D : \ Javacodes  java HelloWorld</p>
 <hr>
-<p>##第二章</p>
-<hr>
-<p>##参考文献</p>
-<p>————</p>
 
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zhi.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wei.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java语法基础</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2025/03/01/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2025/03/03/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B005/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2025/03/03/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B004/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java语法基础笔记04</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -443,87 +332,14 @@
 
 
 
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2025/03/01/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2025/03/01/hello-world/" class="archive-article-date">
-  	<time datetime="2025-02-28T16:16:01.960Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2025/03/01/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -546,8 +362,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

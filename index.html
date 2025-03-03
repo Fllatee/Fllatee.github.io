@@ -152,6 +152,174 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Java语法基础笔记05" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2025/03/03/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B005/">Java语法基础笔记05</a>
+    </h1>
+  
+
+        
+        <a href="/2025/03/03/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B005/" class="archive-article-date">
+  	<time datetime="2025-03-03T13:51:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、import-java-util"><a href="#一、import-java-util" class="headerlink" title="一、import java.util.*"></a>一、import java.util.*</h2><h3 id="1、含义"><a href="#1、含义" class="headerlink" title="1、含义"></a>1、含义</h3><p> （1）<strong>import</strong> 是java中的一个关键字，用于导入其他包（package）中的类、接口等，这样在当前代码文件中就可以直接使用这些被导入的类和接口，而无需使用其全限定名。</p>
+<p>（2）<strong>java.util</strong> 是Java标准库中的一个包，这个包提供了一系列实用工具类和集合框架类，例如用于处理日期和时间的Date、Calendar 类 ，用于存储数据的集合 ArrayList 、LinkedList 、 HashMap 等，以及用于随即生成随机数的 Random类等。</p>
+<p>（3）***** 是一个通配符，表示导入 java.util 包下的所有类和接口。</p>
+<p>（4）<strong>语句整体含义</strong>：导入 <code>java.util</code> 包中的所有类和接口，这样在当前代码文件中就可以直接使用这些类和接口，而不需要每次都写出它们的全限定名。</p>
+<h2 id="二、常用类以及代码示例"><a href="#二、常用类以及代码示例" class="headerlink" title="二、常用类以及代码示例"></a>二、常用类以及代码示例</h2><p>1、代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">util</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">		ArrayList&lt;String&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();<span class="comment">//使用ArrayList类</span></span><br><span class="line">		list.add(<span class="string">&quot;apple&quot;</span>);</span><br><span class="line">		list.add(<span class="string">&quot;banana&quot;</span>);</span><br><span class="line">		list.add(<span class="string">&quot;cherry&quot;</span>);</span><br><span class="line"></span><br><span class="line">		Iterator&lt;String&gt; iterator = list.iterator();</span><br><span class="line">		<span class="keyword">while</span> (iterator.hasNext()) &#123;</span><br><span class="line">			System.out.println(iterator.next());</span><br><span class="line">			<span class="comment">//如果有下一个元素，则将下一个元素输出；</span></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="type">Random</span> <span class="variable">random</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Random</span>();</span><br><span class="line">		<span class="type">int</span> <span class="variable">randomNumber</span> <span class="operator">=</span> random.nextInt(<span class="number">10</span>);</span><br><span class="line">		<span class="comment">//生成的随机整数的范围是0到9（包含0，不包含10）</span></span><br><span class="line">		System.out.println(<span class="string">&quot;Random number :&quot;</span> + randomNumber);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2、敲代码时遇到的问题</p>
+<p>★(1) 在声明公共类时，我并没有让公共类名和java文件名相等，导致代码运行错误。</p>
+<p>​	eg：在名为 <strong>InportExample.java</strong> 的文件内声明 公共<strong>类 InportExample</strong></p>
+<h2 id="三、命令提示符"><a href="#三、命令提示符" class="headerlink" title="三、命令提示符"></a>三、命令提示符</h2><p>1、使用原因：</p>
+<p>（1）理解编译和运行机制：能够让开发者更加深入地了解Java程序从源代码到可执行程序的过程。（使用javac命令手动编译 <code>.java</code> 文件，可以清晰地看到编译器如何将 Java 代码转换为字节码文件（<code>.class</code> 文件）。然后使用 <code>java</code> 命令运行字节码，了解 Java 虚拟机（JVM）是如何加载和执行这些字节码的。这对于理解 Java 语言的底层工作原理非常有帮助，是学习 Java 基础的重要环节。）</p>
+<p>（2）注意事项：</p>
+<p>①D : \ Javacodes  javac HelloWorld.java</p>
+<p>②D : \ Javacodes  java HelloWorld</p>
+<hr>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java语法基础</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2025/03/03/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B005/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Java语法基础笔记04" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2025/03/03/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B004/">Java语法基础笔记04</a>
+    </h1>
+  
+
+        
+        <a href="/2025/03/03/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B004/" class="archive-article-date">
+  	<time datetime="2025-03-03T13:42:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、-和除法的使用"><a href="#一、-和除法的使用" class="headerlink" title="一、%和除法的使用"></a>一、%和除法的使用</h2><p>1、%的作用：通过取模运算和整数除法来分解一个整数并获取其各位数字，主要的过程有以下两步。</p>
+<p>（1）通过取余num % 10 获取整数的最后一个数字。(原理：最后一位是个数，无法被10整除，所以就成了余数)</p>
+<p>（2）使用整数除法 num &#x2F;&#x3D; 10 来去掉 num 的最后一个数字。（此过程会一直重复，直到 num 变为 0 为止。）</p>
+<p>eg：3245 % 10 &#x3D; 5 ; 3245 &#x2F; 10 &#x3D; 324 ;</p>
+<p>☝2025.3.3更新</p>
+<hr>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java语法基础</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2025/03/03/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B004/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-3-3有序数组的平方" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -864,156 +1032,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2025/03/01/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E8%AF%BE%E7%AC%94%E8%AE%B001/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-进一步调试" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2025/03/01/%E8%BF%9B%E4%B8%80%E6%AD%A5%E8%B0%83%E8%AF%95/">进一步调试</a>
-    </h1>
-  
-
-        
-        <a href="/2025/03/01/%E8%BF%9B%E4%B8%80%E6%AD%A5%E8%B0%83%E8%AF%95/" class="archive-article-date">
-  	<time datetime="2025-03-01T07:07:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这是进一步的博客编写调试，拜托一定要成功</p>
-<style>.iyhclxjlmjho{zoom:25%;}</style><img src="/2025/03/01/%E8%BF%9B%E4%B8%80%E6%AD%A5%E8%B0%83%E8%AF%95/000.png" class="iyhclxjlmjho" alt="崔然竣">
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">生活记录</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2025/03/01/%E8%BF%9B%E4%B8%80%E6%AD%A5%E8%B0%83%E8%AF%95/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-继续调试" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2025/03/01/%E7%BB%A7%E7%BB%AD%E8%B0%83%E8%AF%95/">继续调试</a>
-    </h1>
-  
-
-        
-        <a href="/2025/03/01/%E7%BB%A7%E7%BB%AD%E8%B0%83%E8%AF%95/" class="archive-article-date">
-  	<time datetime="2025-03-01T06:55:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>呜呜呜好难呀!</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">生活记录</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2025/03/01/%E7%BB%A7%E7%BB%AD%E8%B0%83%E8%AF%95/">展开全文 >></a>
         </p>
       
 
