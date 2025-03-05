@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>进一步调试 | Fallate</title>
+  <title>力扣-59-螺旋矩阵 | Fallate</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这是进一步的博客编写调试，拜托一定要成功 .jzowttxktovx{zoom:25%;}">
+  <meta name="description" content="一、题目​	给你一个正整数 n ，生成一个包含 1 到 n2 所有元素，且元素按顺时针顺序螺旋排列的 n x n 正方形矩阵 matrix 。 示例 1： 输入：n &#x3D; 3输出：[[1,2,3],[8,9,4],[7,6,5]] 示例 2： 输入：n &#x3D; 1输出：[[1]] 二、思路1、边界条件多，所以一定要坚持循环不变量原则： ​	（1）这里，采用左闭右开的不变量原则（类似于">
 <meta property="og:type" content="article">
-<meta property="og:title" content="进一步调试">
-<meta property="og:url" content="http://example.com/2025/03/01/%E8%BF%9B%E4%B8%80%E6%AD%A5%E8%B0%83%E8%AF%95/index.html">
+<meta property="og:title" content="力扣-59-螺旋矩阵">
+<meta property="og:url" content="http://example.com/2025/03/05/%E5%8A%9B%E6%89%A3-59-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/index.html">
 <meta property="og:site_name" content="Fallate">
-<meta property="og:description" content="这是进一步的博客编写调试，拜托一定要成功 .jzowttxktovx{zoom:25%;}">
+<meta property="og:description" content="一、题目​	给你一个正整数 n ，生成一个包含 1 到 n2 所有元素，且元素按顺时针顺序螺旋排列的 n x n 正方形矩阵 matrix 。 示例 1： 输入：n &#x3D; 3输出：[[1,2,3],[8,9,4],[7,6,5]] 示例 2： 输入：n &#x3D; 1输出：[[1]] 二、思路1、边界条件多，所以一定要坚持循环不变量原则： ​	（1）这里，采用左闭右开的不变量原则（类似于">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2025/03/01/%E8%BF%9B%E4%B8%80%E6%AD%A5%E8%B0%83%E8%AF%95/000.png">
-<meta property="article:published_time" content="2025-03-01T07:07:34.000Z">
-<meta property="article:modified_time" content="2025-03-01T09:09:02.809Z">
+<meta property="article:published_time" content="2025-03-05T07:56:10.000Z">
+<meta property="article:modified_time" content="2025-03-05T08:52:47.246Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="生活记录">
+<meta property="article:tag" content="力扣刷题集合">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2025/03/01/%E8%BF%9B%E4%B8%80%E6%AD%A5%E8%B0%83%E8%AF%95/000.png">
   
     <link rel="alternative" href="/atom.xml" title="Fallate" type="application/atom+xml">
   
@@ -157,28 +155,39 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-进一步调试" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-力扣-59-螺旋矩阵" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      进一步调试
+      力扣-59-螺旋矩阵
     </h1>
   
 
         
-        <a href="/2025/03/01/%E8%BF%9B%E4%B8%80%E6%AD%A5%E8%B0%83%E8%AF%95/" class="archive-article-date">
-  	<time datetime="2025-03-01T07:07:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-01</time>
+        <a href="/2025/03/05/%E5%8A%9B%E6%89%A3-59-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/" class="archive-article-date">
+  	<time datetime="2025-03-05T07:56:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>这是进一步的博客编写调试，拜托一定要成功</p>
-<style>.jzowttxktovx{zoom:25%;}</style><img src="/2025/03/01/%E8%BF%9B%E4%B8%80%E6%AD%A5%E8%B0%83%E8%AF%95/000.png" class="jzowttxktovx" alt="崔然竣">
+        <h3 id="一、题目"><a href="#一、题目" class="headerlink" title="一、题目"></a>一、题目</h3><p>​	给你一个正整数 n ，生成一个包含 1 到 n2 所有元素，且元素按顺时针顺序螺旋排列的 n x n 正方形矩阵 matrix 。</p>
+<p>示例 1：</p>
+<p>输入：n &#x3D; 3<br>输出：[[1,2,3],[8,9,4],[7,6,5]]</p>
+<p>示例 2：</p>
+<p>输入：n &#x3D; 1<br>输出：[[1]]</p>
+<h3 id="二、思路"><a href="#二、思路" class="headerlink" title="二、思路"></a>二、思路</h3><p>1、边界条件多，所以一定要坚持<strong>循环不变量原则</strong>：</p>
+<p>​	（1）这里，采用左闭右开的不变量原则（类似于二分法的边界条件）</p>
+<p>2、模拟顺时针画矩阵的过程：</p>
+<p>​	（1）从左到右填充上层，从上到下填充右列，从右到左填充下层，从下到上填充左列。</p>
+<p>​	（2）由外向内一圈一圈地将数字填充进去。</p>
+<h3 id="三、Java代码"><a href="#三、Java代码" class="headerlink" title="三、Java代码"></a>三、Java代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[][] generateMatrix(<span class="type">int</span> n) &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">startX</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">startY</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">loop</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">offset</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span>[][] nums = <span class="keyword">new</span> <span class="title class_">int</span>[n][n];</span><br><span class="line">        <span class="type">int</span> i,j;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span>(loop &lt;= n / <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">for</span> (j = startY; j &lt; n - offset; j++) &#123;</span><br><span class="line">                nums[startX][j] = count++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span> (i = startX; i &lt; n - offset; i++) &#123;</span><br><span class="line">                nums[i][j] = count++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span> (; j &gt; startY; j--) &#123;</span><br><span class="line">                nums[i][j] = count++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span>(; i &gt; startX; i--) &#123;</span><br><span class="line">                nums[i][j] = count++;</span><br><span class="line">            &#125;</span><br><span class="line">            startX++;</span><br><span class="line">            startY++;</span><br><span class="line">            loop++;</span><br><span class="line">            offset++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(n % <span class="number">2</span> == <span class="number">1</span>) &#123;</span><br><span class="line">            nums[startX][startY] = count;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> nums;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
 
 
       
@@ -224,7 +233,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">生活记录</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">力扣刷题集合</a>
         		</li>
       		
 		</ul>
@@ -280,7 +289,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2025/03/01/%E8%BF%9B%E4%B8%80%E6%AD%A5%E8%B0%83%E8%AF%95/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2025/03/05/%E5%8A%9B%E6%89%A3-59-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -294,18 +303,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2025/03/01/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E8%AF%BE%E7%AC%94%E8%AE%B001/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Java语法基础课笔记01
-        
-      </div>
-    </a>
   
-  
-    <a href="/2025/03/01/%E7%BB%A7%E7%BB%AD%E8%B0%83%E8%AF%95/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">继续调试</div>
+    <a href="/2025/03/05/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B007/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java语法基础笔记07</div>
       <i class="icon-circle-right"></i>
     </a>
   
