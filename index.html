@@ -259,7 +259,61 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h3 id="一、trim（）"><a href="#一、trim（）" class="headerlink" title="一、trim（）"></a>一、trim（）</h3><p>​	（1）定义：trim（）是String类的一个方法</p>
+<p>​	（2）功能：去除字符串首尾的空白字符（包括空格、制表符、换行符等）</p>
+<p>​	eg：输入：“Hello World ”，调用 trim（）方法后，结果将是“Hello World”</p>
+<h3 id="二、sc-close"><a href="#二、sc-close" class="headerlink" title="二、sc.close"></a>二、sc.close</h3><p>（1）前提：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br></pre></td></tr></table></figure>
+
+<p>（2）作用：关闭Scanner 对象 sc，释放其占用的系统资源。</p>
+<p>★注：当Scanenr对象不再使用时，<strong>及时关闭</strong>它是一个良好的编程习惯，<strong>有助于避免资源泄露</strong>。</p>
+<h3 id="三、StringBuilder"><a href="#三、StringBuilder" class="headerlink" title="三、StringBuilder"></a>三、StringBuilder</h3><p>1、定义：StringBuilder 是Java中的一个<strong>类</strong>，位于java.lang包下。</p>
+<p>2、功能：用于<strong>处理可变字符序列。</strong></p>
+<p>3、适用情景：在<strong>处理大量字符串拼接</strong>等操作时，相较于使用String类，能显著提高性能。</p>
+<p>4、使用原因：</p>
+<p>​	（1）在java中，String类是不可变的，一旦创建了一个String对象，它的内容就不能被修改。当进行字符串拼接等操作时，会创建一个又一个新的String对象，原来的对象则会被丢弃。频繁进行这种操作，会产生大量的临时对象，增加垃圾回收的负担，进而影响性能。</p>
+<p>​	（2）而StringBuilder是可变的，它可以在原有对象的基础上进行修改，避免了频繁创建新对象的开销。</p>
+<p>5、创建代码演示：</p>
+<p>​	（1）无参构造函数</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br></pre></td></tr></table></figure>
+
+<p>​	（2）带初始容量的构造函数</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>(<span class="number">20</span>);</span><br></pre></td></tr></table></figure>
+
+<p>​	（3）带初始字符串的构造函数：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>(<span class="string">&quot;Hello&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>6、常用方法</p>
+<p>​	（1）append（）方法：用于将各种类型的数据追加到StringBuilderBuilder对象的末尾。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">sb.append(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">sb.append(<span class="string">&quot; &quot;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>​	（2）insert（）方法：用于在指定位置插入各种类型的数据</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>(<span class="string">&quot;HelloWorld&quot;</span>);</span><br><span class="line">sb.insert(<span class="number">5</span>,<span class="string">&quot; &quot;</span>);</span><br><span class="line">System.out.println(sb.toString());</span><br><span class="line"><span class="comment">//输出：Hello World</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>​	（3）delete（）方法：用于删除指定范围内的字符</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>(<span class="string">&quot;HelloWorld&quot;</span>);</span><br><span class="line">sb.delete(<span class="number">5</span>,<span class="number">10</span>);</span><br><span class="line">System.out.println(sb.toString());</span><br><span class="line"><span class="comment">//输出：Hello</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>​	（4）replace（）方法：用于替换指定范围内的字符</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>(<span class="string">&quot;HelloWorld&quot;</span>);</span><br><span class="line">sb.replace(<span class="number">5</span>,<span class="number">10</span>,<span class="string">&quot; Java&quot;</span>);</span><br><span class="line">System.out.println(sb.toString());</span><br><span class="line"><span class="comment">//输出：Hello Java</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>​	（5）reverse（）方法：用于反转StringBuilder对象中的字符序列</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">sb.reverse();</span><br><span class="line">System.out.println(sb.toString());</span><br><span class="line"><span class="comment">//输出：olleH</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>​	（6）toString（）方法：将<strong>StringBuilder对象</strong>转换为<strong>String对象</strong></p>
+<p>7、缺点：StringBuilder是<strong>非线程安全</strong>的，这意味着在多线程环境下，如果多个线程同时访问和修改同一个StringBuilder对象，可能会导致<strong>数据不一致</strong>的问题。</p>
+
       
 
       
