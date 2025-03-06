@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Java语法基础笔记05 | Fallate</title>
+  <title>Java语法基础笔记08 | Fallate</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、import java.util.*1、含义 （1）import 是java中的一个关键字，用于导入其他包（package）中的类、接口等，这样在当前代码文件中就可以直接使用这些被导入的类和接口，而无需使用其全限定名。 （2）java.util 是Java标准库中的一个包，这个包提供了一系列实用工具类和集合框架类，例如用于处理日期和时间的Date、Calendar 类 ，用于存储数据的集合 A">
+  <meta name="description" content="一、sc.nextLine()的特殊功能1、在Scanner类中，有多种读取输入的方法。**其中nextInt()、nextDouble()和next()**方法在读取到分隔符（默认是空白字符。包括空格、制表符、换行符等）时会停止读取，并且不会消耗分隔符；而nextLine（）方法会读取从当前位置到下一个换行符之间的所有字符，并且会消耗掉这个换行符。 2、示例： 12345678910111213">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java语法基础笔记05">
-<meta property="og:url" content="http://example.com/2025/03/03/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B005/index.html">
+<meta property="og:title" content="Java语法基础笔记08">
+<meta property="og:url" content="http://example.com/2025/03/06/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B008/index.html">
 <meta property="og:site_name" content="Fallate">
-<meta property="og:description" content="一、import java.util.*1、含义 （1）import 是java中的一个关键字，用于导入其他包（package）中的类、接口等，这样在当前代码文件中就可以直接使用这些被导入的类和接口，而无需使用其全限定名。 （2）java.util 是Java标准库中的一个包，这个包提供了一系列实用工具类和集合框架类，例如用于处理日期和时间的Date、Calendar 类 ，用于存储数据的集合 A">
+<meta property="og:description" content="一、sc.nextLine()的特殊功能1、在Scanner类中，有多种读取输入的方法。**其中nextInt()、nextDouble()和next()**方法在读取到分隔符（默认是空白字符。包括空格、制表符、换行符等）时会停止读取，并且不会消耗分隔符；而nextLine（）方法会读取从当前位置到下一个换行符之间的所有字符，并且会消耗掉这个换行符。 2、示例： 12345678910111213">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2025-03-03T13:51:32.000Z">
-<meta property="article:modified_time" content="2025-03-03T15:56:29.651Z">
+<meta property="article:published_time" content="2025-03-06T09:44:28.000Z">
+<meta property="article:modified_time" content="2025-03-06T09:50:45.993Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Java语法基础">
 <meta name="twitter:card" content="summary">
@@ -155,42 +155,30 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Java语法基础笔记05" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Java语法基础笔记08" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Java语法基础笔记05
+      Java语法基础笔记08
     </h1>
   
 
         
-        <a href="/2025/03/03/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B005/" class="archive-article-date">
-  	<time datetime="2025-03-03T13:51:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-03</time>
+        <a href="/2025/03/06/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B008/" class="archive-article-date">
+  	<time datetime="2025-03-06T09:44:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、import-java-util"><a href="#一、import-java-util" class="headerlink" title="一、import java.util.*"></a>一、import java.util.*</h2><h3 id="1、含义"><a href="#1、含义" class="headerlink" title="1、含义"></a>1、含义</h3><p> （1）<strong>import</strong> 是java中的一个关键字，用于导入其他包（package）中的类、接口等，这样在当前代码文件中就可以直接使用这些被导入的类和接口，而无需使用其全限定名。</p>
-<p>（2）<strong>java.util</strong> 是Java标准库中的一个包，这个包提供了一系列实用工具类和集合框架类，例如用于处理日期和时间的Date、Calendar 类 ，用于存储数据的集合 ArrayList 、LinkedList 、 HashMap 等，以及用于随即生成随机数的 Random类等。</p>
-<p>（3）***** 是一个通配符，表示导入 java.util 包下的所有类和接口。</p>
-<p>（4）<strong>语句整体含义</strong>：导入 <code>java.util</code> 包中的所有类和接口，这样在当前代码文件中就可以直接使用这些类和接口，而不需要每次都写出它们的全限定名。</p>
-<h2 id="二、常用类以及代码示例"><a href="#二、常用类以及代码示例" class="headerlink" title="二、常用类以及代码示例"></a>二、常用类以及代码示例</h2><p>1、代码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">util</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">		ArrayList&lt;String&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();<span class="comment">//使用ArrayList类</span></span><br><span class="line">		list.add(<span class="string">&quot;apple&quot;</span>);</span><br><span class="line">		list.add(<span class="string">&quot;banana&quot;</span>);</span><br><span class="line">		list.add(<span class="string">&quot;cherry&quot;</span>);</span><br><span class="line"></span><br><span class="line">		Iterator&lt;String&gt; iterator = list.iterator();</span><br><span class="line">		<span class="keyword">while</span> (iterator.hasNext()) &#123;</span><br><span class="line">			System.out.println(iterator.next());</span><br><span class="line">			<span class="comment">//如果有下一个元素，则将下一个元素输出；</span></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="type">Random</span> <span class="variable">random</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Random</span>();</span><br><span class="line">		<span class="type">int</span> <span class="variable">randomNumber</span> <span class="operator">=</span> random.nextInt(<span class="number">10</span>);</span><br><span class="line">		<span class="comment">//生成的随机整数的范围是0到9（包含0，不包含10）</span></span><br><span class="line">		System.out.println(<span class="string">&quot;Random number :&quot;</span> + randomNumber);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="一、sc-nextLine-的特殊功能"><a href="#一、sc-nextLine-的特殊功能" class="headerlink" title="一、sc.nextLine()的特殊功能"></a>一、sc.nextLine()的特殊功能</h2><p>1、在Scanner类中，有多种读取输入的方法。**其中nextInt()、nextDouble()和next()**方法在读取到分隔符（默认是空白字符。包括空格、制表符、换行符等）时会停止读取，并且不会消耗分隔符；<strong>而nextLine（）方法会读取从当前位置到下一个换行符之间的所有字符，并且会消耗掉这个换行符。</strong></p>
+<p>2、示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ScannerSolution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line"></span><br><span class="line">        System.out.print(<span class="string">&quot;请输入一个整数: &quot;</span>);</span><br><span class="line">        <span class="type">int</span> <span class="variable">number</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 读取并跳过输入中的剩余换行符</span></span><br><span class="line">        sc.nextLine(); </span><br><span class="line"></span><br><span class="line">        System.out.print(<span class="string">&quot;请输入一个字符串: &quot;</span>);</span><br><span class="line">        <span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> sc.nextLine();</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;你输入的整数是: &quot;</span> + number);</span><br><span class="line">        System.out.println(<span class="string">&quot;你输入的字符串是: &quot;</span> + str);</span><br><span class="line"></span><br><span class="line">        sc.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>2、敲代码时遇到的问题</p>
-<p>★(1) 在声明公共类时，我并没有让公共类名和java文件名相等，导致代码运行错误。</p>
-<p>​	eg：在名为 <strong>InportExample.java</strong> 的文件内声明 公共<strong>类 InportExample</strong></p>
-<h2 id="三、命令提示符"><a href="#三、命令提示符" class="headerlink" title="三、命令提示符"></a>三、命令提示符</h2><p>1、使用原因：</p>
-<p>（1）理解编译和运行机制：能够让开发者更加深入地了解Java程序从源代码到可执行程序的过程。（使用javac命令手动编译 <code>.java</code> 文件，可以清晰地看到编译器如何将 Java 代码转换为字节码文件（<code>.class</code> 文件）。然后使用 <code>java</code> 命令运行字节码，了解 Java 虚拟机（JVM）是如何加载和执行这些字节码的。这对于理解 Java 语言的底层工作原理非常有帮助，是学习 Java 基础的重要环节。）</p>
-<p>（2）注意事项：</p>
-<p>①D : \ Javacodes  javac HelloWorld.java</p>
-<p>②D : \ Javacodes  java HelloWorld</p>
-<hr>
 
       
 
@@ -291,7 +279,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2025/03/03/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B005/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2025/03/06/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B008/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -305,18 +293,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2025/03/04/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B006/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2025/03/06/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Java语法基础笔记06
+          冒泡排序
         
       </div>
     </a>
   
   
-    <a href="/2025/03/03/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B004/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Java语法基础笔记04</div>
+    <a href="/2025/03/05/%E5%8A%9B%E6%89%A3-59-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">力扣-59-螺旋矩阵</div>
       <i class="icon-circle-right"></i>
     </a>
   
