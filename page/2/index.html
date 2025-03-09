@@ -152,6 +152,174 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Java语法基础笔记04" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2025/03/03/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B004/">Java语法基础笔记04</a>
+    </h1>
+  
+
+        
+        <a href="/2025/03/03/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B004/" class="archive-article-date">
+  	<time datetime="2025-03-03T13:42:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、-和除法的使用"><a href="#一、-和除法的使用" class="headerlink" title="一、%和除法的使用"></a>一、%和除法的使用</h2><p>1、%的作用：通过取模运算和整数除法来分解一个整数并获取其各位数字，主要的过程有以下两步。</p>
+<p>（1）通过取余num % 10 获取整数的最后一个数字。(原理：最后一位是个数，无法被10整除，所以就成了余数)</p>
+<p>（2）使用整数除法 num &#x2F;&#x3D; 10 来去掉 num 的最后一个数字。（此过程会一直重复，直到 num 变为 0 为止。）</p>
+<p>eg：3245 % 10 &#x3D; 5 ; 3245 &#x2F; 10 &#x3D; 324 ;</p>
+<p>☝2025.3.3更新</p>
+<hr>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java语法基础</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2025/03/03/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B004/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-3-3有序数组的平方" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2025/03/02/3-3%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9/">3—3有序数组的平方</a>
+    </h1>
+  
+
+        
+        <a href="/2025/03/02/3-3%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9/" class="archive-article-date">
+  	<time datetime="2025-03-02T13:20:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、题目"><a href="#一、题目" class="headerlink" title="一、题目"></a>一、题目</h2><p>​	给你一个按 非递减顺序 排序的整数数组 nums，返回 每个数字的平方 组成的新数组，要求也按 非递减顺序 排序。</p>
+<p>​	示例 1：</p>
+<p>​	输入：nums &#x3D; [-4,-1,0,3,10]<br>​	输出：[0,1,9,16,100]<br>​	解释：平方后，数组变为 [16,1,0,9,100]，排序后，数组变为 [0,1,9,16,100]</p>
+<h2 id="二、思路"><a href="#二、思路" class="headerlink" title="二、思路"></a>二、思路</h2><p>​	1、在看到这道题时，我的第一个想法就是先把数组内所有的元素进行平方操作，随后再将平方后的数组从小到大排序，这个也就是暴力求解算法。但是如果使用暴力求解算法，时间复杂度时O（n + nlogn）。想到这儿，我就没有进一步的思路了。</p>
+<p>​	2、双指针法：看到双指针法求解时，我有些诧异，因为在前面的移除元素就用了双指针法，没想到双指针法的涌出如此之大。</p>
+<h2 id="三、双指针法求解"><a href="#三、双指针法求解" class="headerlink" title="三、双指针法求解"></a>三、双指针法求解</h2><p>1、思路：</p>
+<p>数组其实是有序的， 只不过负数平方之后可能成为最大数了。</p>
+<p>那么数组平方的最大值就在数组的两端，不是最左边就是最右边，不可能是中间。</p>
+<p>此时可以考虑双指针法了，i指向起始位置，j指向终止位置。</p>
+<p>定义一个新数组result，和A数组一样的大小，让k指向result数组终止位置。</p>
+<p>如果A[i] * A[i] &lt; A[j] * A[j] 那么result[k–] &#x3D; A[j] * A[j]; 。</p>
+<p>如果A[i] * A[i] &gt;&#x3D; A[j] * A[j] 那么result[k–] &#x3D; A[i] * A[i]; 。</p>
+<p>2、时间复杂度：O（n）</p>
+<p>3、我的代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] sortedSquares(<span class="type">int</span>[] nums) &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> nums.length - <span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span>[] result = <span class="keyword">new</span> <span class="title class_">int</span>[nums.length];</span><br><span class="line">        <span class="type">int</span> <span class="variable">index</span> <span class="operator">=</span> result.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(left &lt;= right) &#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[left] * nums[left] &gt; nums[right] * nums[right]) &#123;</span><br><span class="line">                result[index--] = nums[left] * nums[left];</span><br><span class="line">                ++left;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                result[index--] = nums[right] * nums[right];</span><br><span class="line">                --right;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">代码随想录</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2025/03/02/3-3%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Java语法基础笔记03" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -825,7 +993,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>这是进一步的博客编写调试，拜托一定要成功</p>
-<style>.ovnuoqsdnkpy{zoom:25%;}</style><img src="/2025/03/01/%E8%BF%9B%E4%B8%80%E6%AD%A5%E8%B0%83%E8%AF%95/000.png" class="ovnuoqsdnkpy" alt="崔然竣">
+<style>.pwnekfsvywzt{zoom:25%;}</style><img src="/2025/03/01/%E8%BF%9B%E4%B8%80%E6%AD%A5%E8%B0%83%E8%AF%95/000.png" class="pwnekfsvywzt" alt="崔然竣">
 
 
       
@@ -851,154 +1019,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2025/03/01/%E8%BF%9B%E4%B8%80%E6%AD%A5%E8%B0%83%E8%AF%95/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-继续调试" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2025/03/01/%E7%BB%A7%E7%BB%AD%E8%B0%83%E8%AF%95/">继续调试</a>
-    </h1>
-  
-
-        
-        <a href="/2025/03/01/%E7%BB%A7%E7%BB%AD%E8%B0%83%E8%AF%95/" class="archive-article-date">
-  	<time datetime="2025-03-01T06:55:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>呜呜呜好难呀!</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">生活记录</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2025/03/01/%E7%BB%A7%E7%BB%AD%E8%B0%83%E8%AF%95/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-调试博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2025/03/01/%E8%B0%83%E8%AF%95%E5%8D%9A%E5%AE%A2/">调试博客</a>
-    </h1>
-  
-
-        
-        <a href="/2025/03/01/%E8%B0%83%E8%AF%95%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2025-03-01T06:18:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>好麻烦哇，博客编写都好麻烦</p>
-<img src="/2025/03/01/%E8%B0%83%E8%AF%95%E5%8D%9A%E5%AE%A2/Landi01.jpg" class="" title="李兰迪">上图是我喜欢的女孩
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">生活记录</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2025/03/01/%E8%B0%83%E8%AF%95%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
         </p>
       
 
