@@ -152,6 +152,117 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Java语法基础笔记06" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2025/03/04/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B006/">Java语法基础笔记06</a>
+    </h1>
+  
+
+        
+        <a href="/2025/03/04/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B006/" class="archive-article-date">
+  	<time datetime="2025-03-04T14:25:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、字符串"><a href="#一、字符串" class="headerlink" title="一、字符串"></a>一、字符串</h2><h3 id="1、声明和初始化"><a href="#1、声明和初始化" class="headerlink" title="1、声明和初始化"></a>1、声明和初始化</h3><p>（1）方式一：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> <span class="string">&quot;Hello,Java&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>（2）方式二：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">message</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;Hellow&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>eg:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">line</span> <span class="operator">=</span> sc.nextLine();</span><br></pre></td></tr></table></figure>
+
+<p>解释：</p>
+<p>​	①nextLine()：这是Scanner类的一个方法，它的作用是<strong>读取输入源里的下一行内容，一直到换行符为止，并且会把换行符消耗掉</strong>。该方法返回的是一个String类型的值。</p>
+<p>​	②String line ：这里声明了一个名为line的字符串变量，用来存放<code>nextLine()</code> 方法所读取到的内容。</p>
+<h3 id="2、字符串操作"><a href="#2、字符串操作" class="headerlink" title="2、字符串操作"></a>2、字符串操作</h3><p>（1）<strong>字符串拼接</strong>：Java 支持使用 + 运算符来连接字符串，返回字符串连接之后的结果</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">string</span> <span class="variable">s1</span> <span class="operator">=</span> <span class="string">&quot;hello&quot;</span>;</span><br><span class="line"><span class="type">string</span> <span class="variable">s2</span> <span class="operator">=</span> <span class="string">&quot;world&quot;</span>;</span><br><span class="line"><span class="type">string</span> <span class="variable">s3</span> <span class="operator">=</span> s1 + <span class="string">&quot; &quot;</span> + s2; <span class="comment">// 对字符串进行连接，拼接之后的字符串是&quot;hello world&quot;, 中间加了空格</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>（2）<strong>字符串长度：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> s1.length(); <span class="comment">// 字符串的长度即字符串中字符的个数</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>（3）**字符串比较：**使用 equals() 方法来比较两个字符串的内容是否相等</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">boolean</span> <span class="variable">isEqual</span> <span class="operator">=</span> str1.equals(str2);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String[] scores = <span class="keyword">new</span> <span class="title class_">String</span>[<span class="number">1</span>];</span><br><span class="line">String[] nums = &#123;<span class="string">&quot;A&quot;</span>,<span class="string">&quot;B&quot;</span>&#125;;</span><br><span class="line">scores[i].equals(<span class="string">&quot;A&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>​	①equals（）方法区分大小写。</p>
+<p>​	②不区分大小写：equalsIgnoreCase（）</p>
+<p>（4）<strong>字符串索引：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> <span class="variable">c1</span> <span class="operator">=</span> s1.charAt(<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+
+<p>​	①charAt（）：这是 <code>String</code> 类的一个实例方法，其作用是返回指定索引位置处的字符。该方法的参数是一个整数类型的索引值，索引从 0 开始计数，也就是说，字符串的第一个字符的索引是 0，第二个字符的索引是 1，依此类推。</p>
+<p>（5）字符串的切割和拆分：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String[] parts = s3.split(<span class="string">&quot; &quot;</span>) <span class="comment">// 会将字符串根据空格拆分为多个部分</span></span><br></pre></td></tr></table></figure>
+
+<p>2025.3.5</p>
+<hr>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java语法基础</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2025/03/04/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B006/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Java语法基础笔记05" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -940,98 +1051,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2025/03/01/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B002%E2%80%94%E2%80%94%E6%95%B0%E7%BB%84/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java语法基础课笔记01" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2025/03/01/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E8%AF%BE%E7%AC%94%E8%AE%B001/">Java语法基础课笔记01</a>
-    </h1>
-  
-
-        
-        <a href="/2025/03/01/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E8%AF%BE%E7%AC%94%E8%AE%B001/" class="archive-article-date">
-  	<time datetime="2025-03-01T13:23:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一、System-out-println和System-out-print的区别"><a href="#一、System-out-println和System-out-print的区别" class="headerlink" title="一、System.out.println和System.out.print的区别"></a>一、System.out.println和System.out.print的区别</h2><p>1、功能区别：</p>
-<table>
-<thead>
-<tr>
-<th>System.out.print</th>
-<th>该方法用于将指定的内容原样输出到控制台，输出完成后<u>不会换行。</u></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>System.out.println</td>
-<td>此方法不仅会将指定的内容输出到控制台，而且在输出完成后<strong>会自动换行</strong></td>
-</tr>
-</tbody></table>
-<p>2.代码示例：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">PrintDifference</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 使用 System.out.print 输出内容</span></span><br><span class="line">        System.out.print(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">        System.out.print(<span class="string">&quot; World&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 换行</span></span><br><span class="line">        System.out.println();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 使用 System.out.println 输出内容</span></span><br><span class="line">        System.out.println(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;World&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>(1)结果：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Hello World</span><br><span class="line">Hello</span><br><span class="line">World</span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java语法基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2025/03/01/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E8%AF%BE%E7%AC%94%E8%AE%B001/">展开全文 >></a>
         </p>
       
 

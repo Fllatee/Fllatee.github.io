@@ -152,6 +152,106 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Java语法基础笔记11" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2025/03/09/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B011/">Java语法基础笔记11</a>
+    </h1>
+  
+
+        
+        <a href="/2025/03/09/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B011/" class="archive-article-date">
+  	<time datetime="2025-03-09T10:13:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、面向对象（OOP）"><a href="#一、面向对象（OOP）" class="headerlink" title="一、面向对象（OOP）"></a>一、面向对象（OOP）</h2><p>1、面向对象编程的本质：以类的方法组织代码，以对象的组织（封装）数据。</p>
+<p>2、三大特性：封装、继承、多态 </p>
+<p>3、从认识论角度考虑是先有对象后有类。对象是具体的事物。类是抽象的，是对对象的抽象。</p>
+<p>4、从代码运行角度考虑是先有类后有对象，类是对象的模板。</p>
+<p>4、面向过程是具体的，面向对象是抽象的。</p>
+<h2 id="二、方法调用的回顾"><a href="#二、方法调用的回顾" class="headerlink" title="二、方法调用的回顾"></a>二、方法调用的回顾</h2><p>1、静态方法，调用方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//静态方法</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">say</span><span class="params">()</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;学生说话了&quot;</span>)；</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//静态方法的调用</span></span><br><span class="line">Student.say();</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2、非静态方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//非静态方法</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">say</span><span class="params">()</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;学生说话了&quot;</span>)；</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//非静态方法的调用：实例化</span></span><br><span class="line"><span class="comment">//对象类型 对象名 = 对象值;</span></span><br><span class="line"><span class="type">Student</span> <span class="variable">student</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>();</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>​	遵循一个原则：被static修饰的内容会跟随类的加载而加载，所以静态化的内容可以不用实例化就直接调用，同时两个静态方法之间也可以互相调用。</p>
+<p>​	而没有static，只有在类实例化之后才存在，若未实例化就直接调用，程序会报错。</p>
+<p>​	非静态可以调用静态，静态不可以调用非静态</p>
+</blockquote>
+<h2 id="三、类与对象的创建"><a href="#三、类与对象的创建" class="headerlink" title="三、类与对象的创建"></a>三、类与对象的创建</h2><p>1、类：类是一种抽象的数据类型，它是对某一类事物整体描述&#x2F;定义，但是不能代表某一个具体的事物。(类是一个模版)</p>
+<p>2、对象：对象是抽象概念的具体实例。</p>
+<p>3、使用new关键字创建对象时，除了分配内存空间外，还会给创建好的对象进行默认的初始化以及对类中构造器的调用。</p>
+<p>4、构造器和类名相同，没有返回值。</p>
+<p>5、new本质在调用构造方法，定义有参构造之后，如果想使用无参构造，必须要定义一个无参的构造。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">    <span class="comment">//构造器</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Person</span><span class="params">()</span> &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java语法基础</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2025/03/09/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B011/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Java语法基础笔记10" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -909,117 +1009,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2025/03/05/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B007/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java语法基础笔记06" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2025/03/04/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B006/">Java语法基础笔记06</a>
-    </h1>
-  
-
-        
-        <a href="/2025/03/04/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B006/" class="archive-article-date">
-  	<time datetime="2025-03-04T14:25:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一、字符串"><a href="#一、字符串" class="headerlink" title="一、字符串"></a>一、字符串</h2><h3 id="1、声明和初始化"><a href="#1、声明和初始化" class="headerlink" title="1、声明和初始化"></a>1、声明和初始化</h3><p>（1）方式一：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> <span class="string">&quot;Hello,Java&quot;</span>;</span><br></pre></td></tr></table></figure>
-
-<p>（2）方式二：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">message</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;Hellow&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<p>eg:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">line</span> <span class="operator">=</span> sc.nextLine();</span><br></pre></td></tr></table></figure>
-
-<p>解释：</p>
-<p>​	①nextLine()：这是Scanner类的一个方法，它的作用是<strong>读取输入源里的下一行内容，一直到换行符为止，并且会把换行符消耗掉</strong>。该方法返回的是一个String类型的值。</p>
-<p>​	②String line ：这里声明了一个名为line的字符串变量，用来存放<code>nextLine()</code> 方法所读取到的内容。</p>
-<h3 id="2、字符串操作"><a href="#2、字符串操作" class="headerlink" title="2、字符串操作"></a>2、字符串操作</h3><p>（1）<strong>字符串拼接</strong>：Java 支持使用 + 运算符来连接字符串，返回字符串连接之后的结果</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">string</span> <span class="variable">s1</span> <span class="operator">=</span> <span class="string">&quot;hello&quot;</span>;</span><br><span class="line"><span class="type">string</span> <span class="variable">s2</span> <span class="operator">=</span> <span class="string">&quot;world&quot;</span>;</span><br><span class="line"><span class="type">string</span> <span class="variable">s3</span> <span class="operator">=</span> s1 + <span class="string">&quot; &quot;</span> + s2; <span class="comment">// 对字符串进行连接，拼接之后的字符串是&quot;hello world&quot;, 中间加了空格</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>（2）<strong>字符串长度：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> s1.length(); <span class="comment">// 字符串的长度即字符串中字符的个数</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>（3）**字符串比较：**使用 equals() 方法来比较两个字符串的内容是否相等</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">boolean</span> <span class="variable">isEqual</span> <span class="operator">=</span> str1.equals(str2);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String[] scores = <span class="keyword">new</span> <span class="title class_">String</span>[<span class="number">1</span>];</span><br><span class="line">String[] nums = &#123;<span class="string">&quot;A&quot;</span>,<span class="string">&quot;B&quot;</span>&#125;;</span><br><span class="line">scores[i].equals(<span class="string">&quot;A&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<p>​	①equals（）方法区分大小写。</p>
-<p>​	②不区分大小写：equalsIgnoreCase（）</p>
-<p>（4）<strong>字符串索引：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> <span class="variable">c1</span> <span class="operator">=</span> s1.charAt(<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
-
-<p>​	①charAt（）：这是 <code>String</code> 类的一个实例方法，其作用是返回指定索引位置处的字符。该方法的参数是一个整数类型的索引值，索引从 0 开始计数，也就是说，字符串的第一个字符的索引是 0，第二个字符的索引是 1，依此类推。</p>
-<p>（5）字符串的切割和拆分：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String[] parts = s3.split(<span class="string">&quot; &quot;</span>) <span class="comment">// 会将字符串根据空格拆分为多个部分</span></span><br></pre></td></tr></table></figure>
-
-<p>2025.3.5</p>
-<hr>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java语法基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2025/03/04/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B006/">展开全文 >></a>
         </p>
       
 
