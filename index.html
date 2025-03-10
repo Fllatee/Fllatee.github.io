@@ -445,12 +445,33 @@
 <p>​	（4）VS this ：①代表的对象不同，this本身调用这个对象，super代表父类对象的应用。②前提：this在没有继承时也可以使用，super只能在继承条件下才可以使用。③构造方法：this：本类的构造；super：父类的构造</p>
 <h2 id="三、方法重写（Method-Overrriding）"><a href="#三、方法重写（Method-Overrriding）" class="headerlink" title="三、方法重写（Method Overrriding）"></a>三、方法重写（Method Overrriding）</h2><p>1、重写都是方法的重写，和属性无关</p>
 <p>2、概念：方法重写是指在子类中定义一个与父类中具有相同名称、参数列表和返回类型的方法。当通过子类对象调用该方法时，会执行子类中重写后的方法，而不是父类中的方法。这实现了多态性的一种形式，即同一个方法调用可以根据对象的实际类型产生不同的行为。</p>
+<blockquote>
+<p>3、注意：子类重写了父类的方法，则执行子类的方法，而不执行父类。（对象能执行哪些方法主要看对象左边的类型，和右边关系不大）</p>
+<p>​	父类若想用子类里的方法，必须强制转换</p>
+</blockquote>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">makeSound</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;动物发出声音&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span> <span class="keyword">extends</span> <span class="title class_">Animal</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">makeSound</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;汪汪汪&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Cat</span> <span class="keyword">extends</span> <span class="title class_">Animal</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">makeSound</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;喵喵喵&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">PolymorphismExample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Animal</span> <span class="variable">dog</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Dog</span>();</span><br><span class="line">        <span class="type">Animal</span> <span class="variable">cat</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Cat</span>();</span><br><span class="line">        dog.makeSound(); </span><br><span class="line">        cat.makeSound(); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>3、重写需要有继承关系，子类重写父类的方法</p>
 <p>​	（1）方法名必须相同，参数列表必须相同，返回类型兼容</p>
 <p>4、重写的原因：父类的功能，子类不一定需要，或者不一定满足</p>
 <p>​	Alt + Insert ：override</p>
+<h2 id="四、多态"><a href="#四、多态" class="headerlink" title="四、多态"></a>四、多态</h2><p>1、动态编译：类型：可扩展性变强</p>
+<p>2、<strong>一个对象的实际类型是确定的，但是可以指向的引用类型就不确定</strong></p>
+<p>3、多态是方法的多态，属性没有多态。</p>
+<p>4、父类引用指向子类对象</p>
+<p>5、多态存在的条件</p>
+<ul>
+<li>有继承关系</li>
+<li>子类重写父类方法</li>
+<li>父类引用指向子类对象</li>
+</ul>
+<h2 id="五、instanceof"><a href="#五、instanceof" class="headerlink" title="五、instanceof"></a>五、instanceof</h2><p>1、定义：instanceof 是一个二元运算符</p>
+<p>2、功能：用于判断一个对象是否是某个类（或接口）的实例</p>
+<p>3、基本语法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">object <span class="keyword">instanceof</span> CLass/Interface</span><br><span class="line"><span class="comment">//如果object是Class类的实例或者是其子类的实例，或者object实现了Interface接口，那么表达式返回true。否则，则返回false</span></span><br></pre></td></tr></table></figure>
+
+<p>4、编译看左，运行看右</p>
+<p>5、子类转换为父类，可能是丢一些方法</p>
 
       
 
