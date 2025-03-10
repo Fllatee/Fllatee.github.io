@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>进一步调试 | Fallate</title>
+  <title>4-4翻转链表 | Fallate</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这是进一步的博客编写调试，拜托一定要成功 .fqqtmakngfbi{zoom:25%;}">
+  <meta name="description" content="一、题目 题意：反转一个单链表。 示例: 	输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL  ​			  输出: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL  二、看题解前的一些想法​	在看题解前，我在想这要是个数组就好了，翻转数组很简单。但是这是个链表，然后我就没思路了，此时脑袋中会自动地认为处理这个问题其实不难，但是麻烦。 三、思路1、第">
 <meta property="og:type" content="article">
-<meta property="og:title" content="进一步调试">
-<meta property="og:url" content="http://example.com/2025/03/01/%E8%BF%9B%E4%B8%80%E6%AD%A5%E8%B0%83%E8%AF%95/index.html">
+<meta property="og:title" content="4-4翻转链表">
+<meta property="og:url" content="http://example.com/2025/03/10/4-4%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8/index.html">
 <meta property="og:site_name" content="Fallate">
-<meta property="og:description" content="这是进一步的博客编写调试，拜托一定要成功 .fqqtmakngfbi{zoom:25%;}">
+<meta property="og:description" content="一、题目 题意：反转一个单链表。 示例: 	输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL  ​			  输出: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL  二、看题解前的一些想法​	在看题解前，我在想这要是个数组就好了，翻转数组很简单。但是这是个链表，然后我就没思路了，此时脑袋中会自动地认为处理这个问题其实不难，但是麻烦。 三、思路1、第">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2025/03/01/%E8%BF%9B%E4%B8%80%E6%AD%A5%E8%B0%83%E8%AF%95/000.png">
-<meta property="article:published_time" content="2025-03-01T07:07:34.000Z">
-<meta property="article:modified_time" content="2025-03-01T09:09:02.809Z">
+<meta property="article:published_time" content="2025-03-10T13:40:09.000Z">
+<meta property="article:modified_time" content="2025-03-10T13:50:31.807Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="生活记录">
+<meta property="article:tag" content="代码随想录">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2025/03/01/%E8%BF%9B%E4%B8%80%E6%AD%A5%E8%B0%83%E8%AF%95/000.png">
   
     <link rel="alternative" href="/atom.xml" title="Fallate" type="application/atom+xml">
   
@@ -157,29 +155,45 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-进一步调试" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-4-4翻转链表" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      进一步调试
+      4-4翻转链表
     </h1>
   
 
         
-        <a href="/2025/03/01/%E8%BF%9B%E4%B8%80%E6%AD%A5%E8%B0%83%E8%AF%95/" class="archive-article-date">
-  	<time datetime="2025-03-01T07:07:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-01</time>
+        <a href="/2025/03/10/4-4%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8/" class="archive-article-date">
+  	<time datetime="2025-03-10T13:40:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>这是进一步的博客编写调试，拜托一定要成功</p>
-<style>.fqqtmakngfbi{zoom:25%;}</style><img src="/2025/03/01/%E8%BF%9B%E4%B8%80%E6%AD%A5%E8%B0%83%E8%AF%95/000.png" class="fqqtmakngfbi" alt="崔然竣">
-
+        <h2 id="一、题目"><a href="#一、题目" class="headerlink" title="一、题目"></a>一、题目</h2><blockquote>
+<p>题意：反转一个单链表。</p>
+<p>示例: 	输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL </p>
+<p>​			  输出: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL</p>
+</blockquote>
+<h2 id="二、看题解前的一些想法"><a href="#二、看题解前的一些想法" class="headerlink" title="二、看题解前的一些想法"></a>二、看题解前的一些想法</h2><p>​	在看题解前，我在想这要是个数组就好了，翻转数组很简单。但是这是个链表，然后我就没思路了，此时脑袋中会自动地认为处理这个问题其实不难，但是麻烦。</p>
+<h2 id="三、思路"><a href="#三、思路" class="headerlink" title="三、思路"></a>三、思路</h2><p><strong>1、第一种方法：双指针法</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> 整体思路：改变链表的next指针的指向，直接将链表反转，而不用重新定义一个新的链表。</li>
+<li><input disabled="" type="checkbox"> 首先定义一个cur指针，指向头结点。然后再定义一个pre指针，初始化为null</li>
+<li><input disabled="" type="checkbox"> 接着，设立temp指针存放cur-&gt;next节点</li>
+<li><input disabled="" type="checkbox"> 将cur-&gt;next指向pre，此时就完成了第一个节点的翻转</li>
+<li><input disabled="" type="checkbox"> 接下来，移动pre和cur（注意：这里必须先移动pre，再移动cur）</li>
+<li><input disabled="" type="checkbox"> 最后，cur指针指向null，循环结束，链表的翻转完毕，此时pre指针指向的节点就是新的头结点，return pre即可得到结果。</li>
+</ul>
+<p>2、第二种方法：递归法</p>
+<ul>
+<li><input disabled="" type="checkbox"> 相对抽象，但是和双指针法的思路一样。（从前向后翻转指针指向）</li>
+</ul>
 
       
 
@@ -224,7 +238,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">生活记录</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">代码随想录</a>
         		</li>
       		
 		</ul>
@@ -280,7 +294,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2025/03/01/%E8%BF%9B%E4%B8%80%E6%AD%A5%E8%B0%83%E8%AF%95/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2025/03/10/4-4%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -294,18 +308,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2025/03/01/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E8%AF%BE%E7%AC%94%E8%AE%B001/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Java语法基础课笔记01
-        
-      </div>
-    </a>
   
-  
-    <a href="/2025/03/01/%E7%BB%A7%E7%BB%AD%E8%B0%83%E8%AF%95/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">继续调试</div>
+    <a href="/2025/03/10/%E5%8E%9F%E7%A0%81%E8%A1%A5%E7%A0%81%E5%8F%8D%E7%A0%81/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">原码补码反码</div>
       <i class="icon-circle-right"></i>
     </a>
   

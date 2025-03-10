@@ -152,6 +152,98 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-4-4翻转链表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2025/03/10/4-4%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8/">4-4翻转链表</a>
+    </h1>
+  
+
+        
+        <a href="/2025/03/10/4-4%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8/" class="archive-article-date">
+  	<time datetime="2025-03-10T13:40:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、题目"><a href="#一、题目" class="headerlink" title="一、题目"></a>一、题目</h2><blockquote>
+<p>题意：反转一个单链表。</p>
+<p>示例: 	输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL </p>
+<p>​			  输出: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL</p>
+</blockquote>
+<h2 id="二、看题解前的一些想法"><a href="#二、看题解前的一些想法" class="headerlink" title="二、看题解前的一些想法"></a>二、看题解前的一些想法</h2><p>​	在看题解前，我在想这要是个数组就好了，翻转数组很简单。但是这是个链表，然后我就没思路了，此时脑袋中会自动地认为处理这个问题其实不难，但是麻烦。</p>
+<h2 id="三、思路"><a href="#三、思路" class="headerlink" title="三、思路"></a>三、思路</h2><p><strong>1、第一种方法：双指针法</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> 整体思路：改变链表的next指针的指向，直接将链表反转，而不用重新定义一个新的链表。</li>
+<li><input disabled="" type="checkbox"> 首先定义一个cur指针，指向头结点。然后再定义一个pre指针，初始化为null</li>
+<li><input disabled="" type="checkbox"> 接着，设立temp指针存放cur-&gt;next节点</li>
+<li><input disabled="" type="checkbox"> 将cur-&gt;next指向pre，此时就完成了第一个节点的翻转</li>
+<li><input disabled="" type="checkbox"> 接下来，移动pre和cur（注意：这里必须先移动pre，再移动cur）</li>
+<li><input disabled="" type="checkbox"> 最后，cur指针指向null，循环结束，链表的翻转完毕，此时pre指针指向的节点就是新的头结点，return pre即可得到结果。</li>
+</ul>
+<p>2、第二种方法：递归法</p>
+<ul>
+<li><input disabled="" type="checkbox"> 相对抽象，但是和双指针法的思路一样。（从前向后翻转指针指向）</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">代码随想录</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2025/03/10/4-4%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-原码补码反码" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -888,100 +980,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2025/03/07/%E6%95%B0%E7%BB%84/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-冒泡排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2025/03/06/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/">冒泡排序</a>
-    </h1>
-  
-
-        
-        <a href="/2025/03/06/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/" class="archive-article-date">
-  	<time datetime="2025-03-06T13:12:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一、Bubble-Sort"><a href="#一、Bubble-Sort" class="headerlink" title="一、Bubble Sort"></a>一、Bubble Sort</h3><blockquote>
-<p>1、概念：冒泡排序（Bubble Sort）是一种简单的排序算法，它重复地走访过要排序的数列，一次比较两个元素，如果它们的顺序错误就把它们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。这个算法的名字由来是因为越小的元素会经由交换慢慢 “浮” 到数列的顶端。</p>
-</blockquote>
-<p>2、算法原理</p>
-<p>​	<strong>（1）基本思想：通过相邻元素之间的比较和交换，将较大的元素逐步“冒泡”到数组的末尾。</strong></p>
-<p>​	（2）具体步骤：</p>
-<p>​		①比较相邻元素。</p>
-<p>​		②遍历数组，重复步骤①，直到将最大的元素“冒泡”到数组的末尾。</p>
-<p>​		③重复遍历，对未被排序元素重复步骤①和步骤②，直到整个数组都被排序。</p>
-<p>3、代码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BubbleSort</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">bubbleSort</span><span class="params">(<span class="type">int</span>[] arr)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> arr.length;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n - <span class="number">1</span>; i++) &#123;</span><br><span class="line">            <span class="type">boolean</span> <span class="variable">swapped</span> <span class="operator">=</span> <span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; n - i - <span class="number">1</span>; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span>(arr[j] &gt; arr[j+<span class="number">1</span>]) &#123;</span><br><span class="line">                    <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> arr[j];</span><br><span class="line">                    arr[j] = arr[j+<span class="number">1</span>];</span><br><span class="line">                    arr[j+<span class="number">1</span>] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">int</span>[] arr = &#123;<span class="number">64</span>,<span class="number">34</span>,<span class="number">25</span>,<span class="number">12</span>,<span class="number">22</span>,<span class="number">11</span>,<span class="number">90</span>&#125;;</span><br><span class="line">        System.out.println(<span class="string">&quot;排序前的数组：&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> num : arr) &#123;</span><br><span class="line">            System.out.print(num + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        bubblesort(arr);</span><br><span class="line">        System.out.println(<span class="string">&quot;\n排序后的数组：&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> num : arr) &#123;</span><br><span class="line">            System.out.print(num + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>​	（1）冒泡排序有两层循环，外层循环i代表轮数，内层循环j代表一轮内的比较次数。</p>
-<p>​	（2）在写冒泡排序时，一定要注意数组是从下标为0开始还是从下标为1开始，这个非常重要！！！！！如果是从0开始那么，比较次数j就要小于n-i-1；如果是从1开始，那么比较次数就要小于等于n-i（其实就是小于n-i-1）。<em><strong>额……好像没有啥区别，不过一定要思考好为什么比较次数等于这个</strong></em></p>
-<p>​	（3）外层循环的轮数为什么等于n-1呢？</p>
-<p>​		答：因为在冒泡排序的一轮里，未被排序的数中最大值会被排到数组最后一个位置，也就是说一轮下来能够排好一个元素。那么假如有n个元素，当进行到第n-1轮时，这n个元素中的n-1个元素都被排好了，也就相当于最后一个数也排好序了。因此n个元素需要进行n-1轮排序。</p>
-<p>4、总结与感悟</p>
-<p>​	其实，今天突然写下这篇有关冒泡排序的博客是因为在图书馆学习的朋友突然询问我冒泡排序的代码。</p>
-<p>​	这个时候，其实我的大脑一片空白，只知道冒泡排序意如其名，于是我赶紧问了百度，然后在草稿纸上将冒泡排序的整个过程演算出来，直到这个时候，我的大脑才完完全全清楚地理解了冒泡排序这个算法的原理以及基本思想。</p>
-<p>​	但事后，我又开始反思起来，距离第一次学习冒泡排序已经过去许久了，但是那时候我根本就没有努力去搞清楚冒泡排序的整个流程，导致在编写代码时总是在背。</p>
-<p>​	以后，我再也不会囫囵吞枣地学习算法，力争将每个算法搞清楚、搞透彻，而不是一遍遍麻木自己，用借口来原谅懒惰的自己！！！！！！</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2025/03/06/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/">展开全文 >></a>
         </p>
       
 
