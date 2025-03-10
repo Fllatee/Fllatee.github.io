@@ -152,6 +152,133 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Java语法基础笔记07" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2025/03/05/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B007/">Java语法基础笔记07</a>
+    </h1>
+  
+
+        
+        <a href="/2025/03/05/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B007/" class="archive-article-date">
+  	<time datetime="2025-03-05T06:39:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、trim（）"><a href="#一、trim（）" class="headerlink" title="一、trim（）"></a>一、trim（）</h3><p>​	（1）定义：trim（）是String类的一个方法</p>
+<p>​	（2）功能：去除字符串首尾的空白字符（包括空格、制表符、换行符等）</p>
+<p>​	eg：输入：“Hello World ”，调用 trim（）方法后，结果将是“Hello World”</p>
+<h3 id="二、sc-close"><a href="#二、sc-close" class="headerlink" title="二、sc.close"></a>二、sc.close</h3><p>（1）前提：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br></pre></td></tr></table></figure>
+
+<p>（2）作用：关闭Scanner 对象 sc，释放其占用的系统资源。</p>
+<p>★注：当Scanenr对象不再使用时，<strong>及时关闭</strong>它是一个良好的编程习惯，<strong>有助于避免资源泄露</strong>。</p>
+<h3 id="三、StringBuilder"><a href="#三、StringBuilder" class="headerlink" title="三、StringBuilder"></a>三、StringBuilder</h3><p>1、定义：StringBuilder 是Java中的一个<strong>类</strong>，位于java.lang包下。</p>
+<p>2、功能：用于<strong>处理可变字符序列。</strong></p>
+<p>3、适用情景：在<strong>处理大量字符串拼接</strong>等操作时，相较于使用String类，能显著提高性能。</p>
+<p>4、使用原因：</p>
+<p>​	（1）在java中，String类是不可变的，一旦创建了一个String对象，它的内容就不能被修改。当进行字符串拼接等操作时，会创建一个又一个新的String对象，原来的对象则会被丢弃。频繁进行这种操作，会产生大量的临时对象，增加垃圾回收的负担，进而影响性能。</p>
+<p>​	（2）而StringBuilder是可变的，它可以在原有对象的基础上进行修改，避免了频繁创建新对象的开销。</p>
+<p>5、创建代码演示：</p>
+<p>​	（1）无参构造函数</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br></pre></td></tr></table></figure>
+
+<p>​	（2）带初始容量的构造函数</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>(<span class="number">20</span>);</span><br></pre></td></tr></table></figure>
+
+<p>​	（3）带初始字符串的构造函数：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>(<span class="string">&quot;Hello&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>6、常用方法</p>
+<p>​	（1）append（）方法：用于将各种类型的数据追加到StringBuilderBuilder对象的末尾。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">sb.append(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">sb.append(<span class="string">&quot; &quot;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>​	（2）insert（）方法：用于在指定位置插入各种类型的数据</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>(<span class="string">&quot;HelloWorld&quot;</span>);</span><br><span class="line">sb.insert(<span class="number">5</span>,<span class="string">&quot; &quot;</span>);</span><br><span class="line">System.out.println(sb.toString());</span><br><span class="line"><span class="comment">//输出：Hello World</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>​	（3）delete（）方法：用于删除指定范围内的字符</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>(<span class="string">&quot;HelloWorld&quot;</span>);</span><br><span class="line">sb.delete(<span class="number">5</span>,<span class="number">10</span>);</span><br><span class="line">System.out.println(sb.toString());</span><br><span class="line"><span class="comment">//输出：Hello</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>​	（4）replace（）方法：用于替换指定范围内的字符</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>(<span class="string">&quot;HelloWorld&quot;</span>);</span><br><span class="line">sb.replace(<span class="number">5</span>,<span class="number">10</span>,<span class="string">&quot; Java&quot;</span>);</span><br><span class="line">System.out.println(sb.toString());</span><br><span class="line"><span class="comment">//输出：Hello Java</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>​	（5）reverse（）方法：用于反转StringBuilder对象中的字符序列</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">sb.reverse();</span><br><span class="line">System.out.println(sb.toString());</span><br><span class="line"><span class="comment">//输出：olleH</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>​	（6）toString（）方法：将<strong>StringBuilder对象</strong>转换为<strong>String对象</strong></p>
+<p>7、缺点：StringBuilder是<strong>非线程安全</strong>的，这意味着在多线程环境下，如果多个线程同时访问和修改同一个StringBuilder对象，可能会导致<strong>数据不一致</strong>的问题。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java语法基础</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2025/03/05/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B007/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Java语法基础笔记06" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -934,123 +1061,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2025/03/01/3-1%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java语法基础笔记02——数组" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2025/03/01/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B002%E2%80%94%E2%80%94%E6%95%B0%E7%BB%84/">Java语法基础笔记02——数组</a>
-    </h1>
-  
-
-        
-        <a href="/2025/03/01/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B002%E2%80%94%E2%80%94%E6%95%B0%E7%BB%84/" class="archive-article-date">
-  	<time datetime="2025-03-01T13:48:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一、数组"><a href="#一、数组" class="headerlink" title="一、数组"></a>一、数组</h2><p><strong>1.整体代码：</strong></p>
-<p>（1）使用数组</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line">     <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line"></span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">        <span class="type">int</span>[] nums = <span class="keyword">new</span> <span class="title class_">int</span>[n];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            nums[i] = sc.nextInt();</span><br><span class="line">        &#125;<span class="comment">//将输入的数字存到数组中</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> nums.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line"></span><br><span class="line">            System.out.print(nums[i]);</span><br><span class="line">            <span class="keyword">if</span>(i &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                System.out.print(<span class="string">&quot; &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;<span class="comment">//倒序输出数组</span></span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot; &quot;</span>);<span class="comment">//换行</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; nums.length; i += <span class="number">2</span>) &#123;</span><br><span class="line">            System.out.print(nums[i]);</span><br><span class="line">            <span class="keyword">if</span>(i &lt; nums.length - <span class="number">1</span>) &#123;</span><br><span class="line">                System.out.print(<span class="string">&quot; &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;<span class="comment">//间隔输出</span></span><br><span class="line"></span><br><span class="line">        sc.close();</span><br><span class="line"></span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>（2）使用ArrayList</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line">     <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line"></span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">        ArrayList&lt;Integer&gt; nums = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;Integer&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (n-- &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">while</span> (sc.hasNextInt()) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">                nums.add(num);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;<span class="comment">//将数组放进ArrayList</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> nums.size() - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            System.out.print(nums.get(i));</span><br><span class="line">            <span class="keyword">if</span>(i &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                System.out.print(<span class="string">&quot; &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;<span class="comment">//倒序输出</span></span><br><span class="line"></span><br><span class="line">        System.out.println();<span class="comment">//换行</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span> ; i &lt; nums.size() ; i += <span class="number">2</span>) &#123;</span><br><span class="line">            System.out.print(nums.get(i));</span><br><span class="line">            <span class="keyword">if</span>(i &lt; nums.size() - <span class="number">1</span>) &#123;</span><br><span class="line">                System.out.print(<span class="string">&quot; &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        sc.close();</span><br><span class="line"></span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>2.数组（Array）和ArrayList的区别：</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Array</th>
-<th>ArrayList</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>定义和声明方式</td>
-<td>需要指定数据类型和数组大小</td>
-<td>动态数组，声明时只需要指定数据类型，不许指定大小，会根据添加和删除自动调整容量</td>
-</tr>
-<tr>
-<td>大小可变性</td>
-<td>大小固定，无法改变</td>
-<td>动态的，可以根绝需要自动调整大小</td>
-</tr>
-<tr>
-<td>数据类型支持</td>
-<td>基本数据类型和引用数据类型int[] intArray &#x3D; {1, 2, 3};  String[] stringArray &#x3D; {“apple”, “banana”, “cherry”};</td>
-<td>只能存储引用数据类型，若存储基本数据类型，则需要使用对应的包装类ArrayList<Integer> intArrayList &#x3D; new ArrayList&lt;&gt;();</td>
-</tr>
-<tr>
-<td>方法和功能</td>
-<td>访问、修改、获取数组长度（<strong>nums.length</strong>）</td>
-<td>添加、删除（remove）、获取（<strong>nums.get(0)</strong>）、查找(<strong>nums.indexof(1)</strong>)、排序、大小（<strong>nums.size()</strong>）</td>
-</tr>
-</tbody></table>
-<p>3、增强for循环：</p>
-<p>除了普通的for循环遍历，还可以使用增强型 for 循环或来遍历 ArrayList 中的元素，结构如下，这种方式更为简洁和易读，基本语法如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (elementType element : collection) &#123;</span><br><span class="line">    <span class="comment">// 在此处处理 element</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>eg：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (String name : names) &#123;</span><br><span class="line">    System.out.println(name);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java语法基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2025/03/01/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B002%E2%80%94%E2%80%94%E6%95%B0%E7%BB%84/">展开全文 >></a>
         </p>
       
 

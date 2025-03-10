@@ -152,6 +152,115 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Java语法基础笔记12" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2025/03/10/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B012/">Java语法基础笔记12</a>
+    </h1>
+  
+
+        
+        <a href="/2025/03/10/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B012/" class="archive-article-date">
+  	<time datetime="2025-03-10T03:24:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、封装"><a href="#一、封装" class="headerlink" title="一、封装"></a>一、封装</h2><p>1、该露的露，该藏的藏。核心：private</p>
+<p>2、程序设计要追求**“高内聚，低耦合”**。</p>
+<p>​	（1）高内聚：类的内部数据操作细节自己完成，不允许外部干涉</p>
+<p>​	（2）低耦合：仅暴露少量的方法给外部使用</p>
+<p>3、属性私有，get&#x2F;set</p>
+<p>4、封装的意义：</p>
+<p>​	（1）提高程序的安全性，保护数据</p>
+<p>​	（2）隐藏代码的实现细节</p>
+<p>​	（3）统一接口</p>
+<p>​	（4）系统可维护性增加了</p>
+<p>5、封装代码示例</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> String name;<span class="comment">//属性私有化</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setName</span><span class="params">(String name)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.name = name;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="二、继承"><a href="#二、继承" class="headerlink" title="二、继承"></a>二、继承</h2><p>1、继承的本质：对某一批类的抽象，从而实现对现实世界更好的建模</p>
+<p>2、<strong>extends</strong>的意思是“扩展”，<strong>子类是父类的扩展</strong></p>
+<p>3、Java中类只有单继承，没有多继承</p>
+<p>4、在Java中，所有的类都直接或间接地继承object</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Student</span> <span class="keyword">extends</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">    <span class="comment">//子类：Student</span></span><br><span class="line">    <span class="comment">//父类：Person</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>5、<strong>super</strong></p>
+<p>​	（1）super调用父类的构造方法，必须在构造方法的第一个</p>
+<p>​	（2）super必须只能在子类的方法或者构造方法中</p>
+<p>​	（3）super和this不能同时调用构造方法</p>
+<p>​	（4）VS this ：①代表的对象不同，this本身调用这个对象，super代表父类对象的应用。②前提：this在没有继承时也可以使用，super只能在继承条件下才可以使用。③构造方法：this：本类的构造；super：父类的构造</p>
+<h2 id="三、方法重写（Method-Overrriding）"><a href="#三、方法重写（Method-Overrriding）" class="headerlink" title="三、方法重写（Method Overrriding）"></a>三、方法重写（Method Overrriding）</h2><p>1、重写都是方法的重写，和属性无关</p>
+<p>2、概念：方法重写是指在子类中定义一个与父类中具有相同名称、参数列表和返回类型的方法。当通过子类对象调用该方法时，会执行子类中重写后的方法，而不是父类中的方法。这实现了多态性的一种形式，即同一个方法调用可以根据对象的实际类型产生不同的行为。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">makeSound</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;动物发出声音&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span> <span class="keyword">extends</span> <span class="title class_">Animal</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">makeSound</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;汪汪汪&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Cat</span> <span class="keyword">extends</span> <span class="title class_">Animal</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">makeSound</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;喵喵喵&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">PolymorphismExample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Animal</span> <span class="variable">dog</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Dog</span>();</span><br><span class="line">        <span class="type">Animal</span> <span class="variable">cat</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Cat</span>();</span><br><span class="line">        dog.makeSound(); </span><br><span class="line">        cat.makeSound(); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3、重写需要有继承关系，子类重写父类的方法</p>
+<p>​	（1）方法名必须相同，参数列表必须相同，返回类型兼容</p>
+<p>4、重写的原因：父类的功能，子类不一定需要，或者不一定满足</p>
+<p>​	Alt + Insert ：override</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java语法基础</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2025/03/10/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B012/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Java语法基础笔记11" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -882,133 +991,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2025/03/05/%E5%8A%9B%E6%89%A3-59-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java语法基础笔记07" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2025/03/05/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B007/">Java语法基础笔记07</a>
-    </h1>
-  
-
-        
-        <a href="/2025/03/05/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B007/" class="archive-article-date">
-  	<time datetime="2025-03-05T06:39:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一、trim（）"><a href="#一、trim（）" class="headerlink" title="一、trim（）"></a>一、trim（）</h3><p>​	（1）定义：trim（）是String类的一个方法</p>
-<p>​	（2）功能：去除字符串首尾的空白字符（包括空格、制表符、换行符等）</p>
-<p>​	eg：输入：“Hello World ”，调用 trim（）方法后，结果将是“Hello World”</p>
-<h3 id="二、sc-close"><a href="#二、sc-close" class="headerlink" title="二、sc.close"></a>二、sc.close</h3><p>（1）前提：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br></pre></td></tr></table></figure>
-
-<p>（2）作用：关闭Scanner 对象 sc，释放其占用的系统资源。</p>
-<p>★注：当Scanenr对象不再使用时，<strong>及时关闭</strong>它是一个良好的编程习惯，<strong>有助于避免资源泄露</strong>。</p>
-<h3 id="三、StringBuilder"><a href="#三、StringBuilder" class="headerlink" title="三、StringBuilder"></a>三、StringBuilder</h3><p>1、定义：StringBuilder 是Java中的一个<strong>类</strong>，位于java.lang包下。</p>
-<p>2、功能：用于<strong>处理可变字符序列。</strong></p>
-<p>3、适用情景：在<strong>处理大量字符串拼接</strong>等操作时，相较于使用String类，能显著提高性能。</p>
-<p>4、使用原因：</p>
-<p>​	（1）在java中，String类是不可变的，一旦创建了一个String对象，它的内容就不能被修改。当进行字符串拼接等操作时，会创建一个又一个新的String对象，原来的对象则会被丢弃。频繁进行这种操作，会产生大量的临时对象，增加垃圾回收的负担，进而影响性能。</p>
-<p>​	（2）而StringBuilder是可变的，它可以在原有对象的基础上进行修改，避免了频繁创建新对象的开销。</p>
-<p>5、创建代码演示：</p>
-<p>​	（1）无参构造函数</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br></pre></td></tr></table></figure>
-
-<p>​	（2）带初始容量的构造函数</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>(<span class="number">20</span>);</span><br></pre></td></tr></table></figure>
-
-<p>​	（3）带初始字符串的构造函数：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>(<span class="string">&quot;Hello&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-
-
-<p>6、常用方法</p>
-<p>​	（1）append（）方法：用于将各种类型的数据追加到StringBuilderBuilder对象的末尾。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">sb.append(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">sb.append(<span class="string">&quot; &quot;</span>);</span><br></pre></td></tr></table></figure>
-
-
-
-<p>​	（2）insert（）方法：用于在指定位置插入各种类型的数据</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>(<span class="string">&quot;HelloWorld&quot;</span>);</span><br><span class="line">sb.insert(<span class="number">5</span>,<span class="string">&quot; &quot;</span>);</span><br><span class="line">System.out.println(sb.toString());</span><br><span class="line"><span class="comment">//输出：Hello World</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>​	（3）delete（）方法：用于删除指定范围内的字符</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>(<span class="string">&quot;HelloWorld&quot;</span>);</span><br><span class="line">sb.delete(<span class="number">5</span>,<span class="number">10</span>);</span><br><span class="line">System.out.println(sb.toString());</span><br><span class="line"><span class="comment">//输出：Hello</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>​	（4）replace（）方法：用于替换指定范围内的字符</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>(<span class="string">&quot;HelloWorld&quot;</span>);</span><br><span class="line">sb.replace(<span class="number">5</span>,<span class="number">10</span>,<span class="string">&quot; Java&quot;</span>);</span><br><span class="line">System.out.println(sb.toString());</span><br><span class="line"><span class="comment">//输出：Hello Java</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>​	（5）reverse（）方法：用于反转StringBuilder对象中的字符序列</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">sb.reverse();</span><br><span class="line">System.out.println(sb.toString());</span><br><span class="line"><span class="comment">//输出：olleH</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>​	（6）toString（）方法：将<strong>StringBuilder对象</strong>转换为<strong>String对象</strong></p>
-<p>7、缺点：StringBuilder是<strong>非线程安全</strong>的，这意味着在多线程环境下，如果多个线程同时访问和修改同一个StringBuilder对象，可能会导致<strong>数据不一致</strong>的问题。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java语法基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2025/03/05/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B007/">展开全文 >></a>
         </p>
       
 
