@@ -152,6 +152,100 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-3-2移除元素" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2025/03/02/3-2%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/">3.2移除元素</a>
+    </h1>
+  
+
+        
+        <a href="/2025/03/02/3-2%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/" class="archive-article-date">
+  	<time datetime="2025-03-02T02:11:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、题目"><a href="#一、题目" class="headerlink" title="一、题目"></a>一、题目</h2><p>​	给你一个数组 nums 和一个值 val，你需要 原地 移除所有数值等于 val 的元素，并返回移除后数组的新长度。不要使用额外的数组空间，你必须仅使用 O(1) 额外空间并原地修改输入数组。元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。</p>
+<p>​	示例 1: 给定 nums &#x3D; [3,2,2,3], val &#x3D; 3, 函数应该返回新的长度 2, 并且 nums 中的前两个元素均为 2。 你不需要考虑数组中超出新长度后面的元素。</p>
+<h2 id="二、思路"><a href="#二、思路" class="headerlink" title="二、思路"></a>二、思路</h2><p>​	1、在解这道题时，我的下意识想法就是再创建一个新数组，这个新数组用来存放删除后所保留的元素。但是这样的想法违背了题目的意思。否定此法后，就自然而然想到了将数组中要被删除的元素覆盖，想到这个方法时我的脑海里仍旧只有用某一个特定的数来覆盖待删除的元素。但是到此只有思路，却没有真正的解题步骤。</p>
+<p>2、<strong>数组的元素在内存地址中是连续的，不能单独删除数组中的某个元素，只能覆盖。</strong></p>
+<h2 id="三、两个解法"><a href="#三、两个解法" class="headerlink" title="三、两个解法"></a>三、两个解法</h2><p>**1、暴力解法：**使用两层for循环，一个for循环遍历数组元素，第二个for循环更新数组</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 时间复杂度：O(n^2)</span></span><br><span class="line"><span class="comment">// 空间复杂度：O(1)</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">removeElement</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> size = nums.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[i] == val) &#123; <span class="comment">// 发现需要移除的元素，就将数组集体向前移动一位</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; size; j++) &#123;</span><br><span class="line">                    nums[j - <span class="number">1</span>] = nums[j];</span><br><span class="line">                &#125;</span><br><span class="line">                i--; <span class="comment">// 因为下标i以后的数值都向前移动了一位，所以i也向前移动一位</span></span><br><span class="line">                size--; <span class="comment">// 此时数组的大小-1</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> size;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>2、双指针法（快慢指针法）</strong></p>
+<p>（1）定义：通过一个快指针和慢指针在一个for循环下完成两个for循环的工作，时间复杂度大大减少。</p>
+<p>（2）快慢指针：快指针用来寻找新数组的元素（新数组就是不含有目标元素的数组），慢指针用来指向更新（新数组下标的位置）</p>
+<p>fastIndex  slowIndex</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 时间复杂度：O(n)</span></span><br><span class="line"><span class="comment">// 空间复杂度：O(1)</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">removeElement</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> slowIndex = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> fastIndex = <span class="number">0</span>; fastIndex &lt; nums.<span class="built_in">size</span>(); fastIndex++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (val != nums[fastIndex]) &#123;</span><br><span class="line">                nums[slowIndex++] = nums[fastIndex];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> slowIndex;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>以下是我写的java代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">removeElement</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> val)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">slow</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> fast;</span><br><span class="line">        <span class="keyword">for</span>(fast = <span class="number">0</span>; fast &lt; nums.length; fast++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[fast] != val) &#123;</span><br><span class="line">                nums[slow] = nums[fast];</span><br><span class="line">                slow++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> slow;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="四、反思"><a href="#四、反思" class="headerlink" title="四、反思"></a>四、反思</h2><p>​	对快慢指针不了解，而快慢指针在数组和链表里非常常见，以后要多加练习，用快慢指针解决问题。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">代码随想录</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2025/03/02/3-2%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-3-1二分查找" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -477,7 +571,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>这是进一步的博客编写调试，拜托一定要成功</p>
-<style>.zynhexsxqbgv{zoom:25%;}</style><img src="/2025/03/01/%E8%BF%9B%E4%B8%80%E6%AD%A5%E8%B0%83%E8%AF%95/000.png" class="zynhexsxqbgv" alt="崔然竣">
+<style>.keattawiljws{zoom:25%;}</style><img src="/2025/03/01/%E8%BF%9B%E4%B8%80%E6%AD%A5%E8%B0%83%E8%AF%95/000.png" class="keattawiljws" alt="崔然竣">
 
 
       
@@ -934,6 +1028,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">力扣刷题集合</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">计算机组成原理</a>
               </li>
              
               <li class="article-tag-list-item">

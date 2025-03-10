@@ -152,6 +152,95 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-原码补码反码" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2025/03/10/%E5%8E%9F%E7%A0%81%E8%A1%A5%E7%A0%81%E5%8F%8D%E7%A0%81/">原码补码反码</a>
+    </h1>
+  
+
+        
+        <a href="/2025/03/10/%E5%8E%9F%E7%A0%81%E8%A1%A5%E7%A0%81%E5%8F%8D%E7%A0%81/" class="archive-article-date">
+  	<time datetime="2025-03-10T13:11:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、原码"><a href="#一、原码" class="headerlink" title="一、原码"></a>一、原码</h2><p>1、最高位为符号位，0表示整数，1表示负数，非符号位为该数字绝对值的二进制 。</p>
+<p>eg：5的原码：0000 0101 ；-5的原码：1000 0101（以一个字节8位为例）</p>
+<h2 id="二、反码"><a href="#二、反码" class="headerlink" title="二、反码"></a>二、反码</h2><p>1、正数的反码与原码一致，负数的反码是对原码按位取反，只是最高位（符号位）不变。</p>
+<p>eg ：5的反码：0000 0101 ； -5的反码：1111 1010</p>
+<h2 id="三、补码（计算机存储数据以补码形式存储）"><a href="#三、补码（计算机存储数据以补码形式存储）" class="headerlink" title="三、补码（计算机存储数据以补码形式存储）"></a>三、补码（计算机存储数据以补码形式存储）</h2><p>1、正数的补码与原码一致，负数的补码是该数的反码加1</p>
+<p>eg：5的补码：0000 0101 ； -5的补码：1111 1011</p>
+<p>例题（已知补码求原码）：0000 0101 ：最高位为0，所以是正数，是5</p>
+<p>​			1111 1011：反码为1111 1010 ，原码为 1000 0101 ，是-5</p>
+<h2 id="三、为什么计算机以补码形式存储？"><a href="#三、为什么计算机以补码形式存储？" class="headerlink" title="三、为什么计算机以补码形式存储？"></a>三、为什么计算机以补码形式存储？</h2><p>​	<strong>CPU里只有加法器，而没有减法器。</strong></p>
+<p>​	eg：5-5 &#x3D;&#x3D; 5+（-5）</p>
+<blockquote>
+<p>上面的例子，用原码相加计算和反码相加计算后转换成十进制的结果都不对。而补码相加后，结果是正确的。</p>
+<p>补码相加：0000 0101 + 1111 1011 &#x3D; 10000 0000 &#x3D; 0000 0000 </p>
+</blockquote>
+<h2 id="四、移码"><a href="#四、移码" class="headerlink" title="四、移码"></a>四、移码</h2><p>1、移码是在真值的基础上加上一个固定偏移量来表示数值的编码</p>
+<p>2、移码和补码之间存在一定的转换关系，对于同一个真值，其移码和补码的数值位相同，符号位相反。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">计算机组成原理</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2025/03/10/%E5%8E%9F%E7%A0%81%E8%A1%A5%E7%A0%81%E5%8F%8D%E7%A0%81/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-4-3设计链表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -922,83 +1011,6 @@
 
 
   
-    <article id="post-Java语法基础笔记08" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2025/03/06/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B008/">Java语法基础笔记08</a>
-    </h1>
-  
-
-        
-        <a href="/2025/03/06/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B008/" class="archive-article-date">
-  	<time datetime="2025-03-06T09:44:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-03-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一、sc-nextLine-的特殊功能"><a href="#一、sc-nextLine-的特殊功能" class="headerlink" title="一、sc.nextLine()的特殊功能"></a>一、sc.nextLine()的特殊功能</h2><p>1、在Scanner类中，有多种读取输入的方法。**其中nextInt()、nextDouble()和next()**方法在读取到分隔符（默认是空白字符。包括空格、制表符、换行符等）时会停止读取，并且不会消耗分隔符；<strong>而nextLine（）方法会读取从当前位置到下一个换行符之间的所有字符，并且会消耗掉这个换行符。</strong></p>
-<p>2、示例：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ScannerSolution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line"></span><br><span class="line">        System.out.print(<span class="string">&quot;请输入一个整数: &quot;</span>);</span><br><span class="line">        <span class="type">int</span> <span class="variable">number</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 读取并跳过输入中的剩余换行符</span></span><br><span class="line">        sc.nextLine(); </span><br><span class="line"></span><br><span class="line">        System.out.print(<span class="string">&quot;请输入一个字符串: &quot;</span>);</span><br><span class="line">        <span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> sc.nextLine();</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;你输入的整数是: &quot;</span> + number);</span><br><span class="line">        System.out.println(<span class="string">&quot;你输入的字符串是: &quot;</span> + str);</span><br><span class="line"></span><br><span class="line">        sc.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java语法基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2025/03/06/Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B008/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1109,6 +1121,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">力扣刷题集合</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">计算机组成原理</a>
               </li>
              
               <li class="article-tag-list-item">
